@@ -1,0 +1,49 @@
+services:
+    php:
+        build:
+            dockerfile: .docker/php/dev/Dockerfile
+            context: .
+            args:
+                USER_NAME: ${USER_NAME:-root}
+                USER_ID: ${USER_ID:-0}
+        container_name: wedly-php-dev
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        volumes:
+            - .:/var/www/html
+
+    nginx:
+        build:
+            dockerfile: .docker/nginx/Dockerfile
+            context: .
+        container_name: wedly-nginx-dev
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "8080:8080"
+
+    mysql:
+        image: mysql:8.0
+        container_name: wedly-mysql-dev
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_DATABASE: ${DB_DATABASE}
+        ports:
+            - "33060:3306"
+
+    mailpit:
+        image: axllent/mailpit:v1.6
+        container_name: wedly-mailpit-dev
+        environment:
+            TZ: "Europe/Berlin"
+        ports:
+            - "8025:8025"
+            - "1025:1025"
+
+    redis:
+        image: redis/redis-stack:latest
+        container_name: wedly-redis-dev
+        ports:
+            - "8001:8001"
+            - "6379:6379"

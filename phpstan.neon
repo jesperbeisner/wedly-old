@@ -1,0 +1,10 @@
+parameters:
+    level: max
+
+    paths:
+        - app
+        - tests
+
+includes:
+    - vendor/nunomaduro/larastan/extension.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
