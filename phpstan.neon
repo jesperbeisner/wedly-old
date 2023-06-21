@@ -5,6 +5,10 @@ parameters:
         - app
         - tests
 
+    stubFiles:
+        - .phpstan/stubs/GuardAttributes.stub
+        - .phpstan/stubs/EventServiceProvider.stub
+
 includes:
     - vendor/nunomaduro/larastan/extension.neon
     - vendor/phpstan/phpstan-strict-rules/rules.neon

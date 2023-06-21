@@ -1,0 +1,9 @@
+<?php
+
+namespace Illuminate\Foundation\Support\Providers;
+
+class EventServiceProvider
+{
+    /** @var array<class-string, array<int, class-string>> */
+    protected $listen = [];
+}
