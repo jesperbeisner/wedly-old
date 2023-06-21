@@ -7,6 +7,9 @@ services:
                 USER_NAME: ${USER_NAME:-root}
                 USER_ID: ${USER_ID:-0}
         container_name: wedly-php-dev
+        depends_on:
+            mysql:
+                condition: service_healthy
         extra_hosts:
             - "host.docker.internal:host-gateway"
         volumes:
@@ -31,6 +34,10 @@ services:
             MYSQL_DATABASE: ${DB_DATABASE}
         ports:
             - "33060:3306"
+        healthcheck:
+            test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+            interval: 5s
+            retries: 5
 
     mailpit:
         image: axllent/mailpit:v1.6
