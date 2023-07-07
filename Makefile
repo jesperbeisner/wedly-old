@@ -8,13 +8,16 @@ build: ## Start all docker containers and build everything
 reset: ## Resets everything
 	./scripts/reset.sh
 
+reset-db: ## Resets the database
+	./scripts/reset-db.sh
+
 down: ## Remove everything
 	docker compose down -v --remove-orphans
 
-test: csfixer phpunit phpstan ## Run PHP-CS-Fixer, PHPUnit and PHPStan
+test: pint phpunit phpstan ## Run PHP-CS-Fixer, PHPUnit and PHPStan
 
-csfixer: ## Run PHP-CS-Fixer
-	docker compose exec php vendor/bin/php-cs-fixer fix --diff
+pint: ## Run PHP-CS-Fixer
+	docker compose exec php vendor/bin/pint --verbose
 
 phpunit: ## Run PHPUnit
 	docker compose exec php vendor/bin/phpunit

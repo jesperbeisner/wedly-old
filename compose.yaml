@@ -20,6 +20,8 @@ services:
             dockerfile: .docker/nginx/Dockerfile
             context: .
         container_name: wedly-nginx-dev
+        depends_on:
+            - php
         volumes:
             - .:/var/www/html
         ports:
