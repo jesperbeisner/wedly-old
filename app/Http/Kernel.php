@@ -41,7 +41,7 @@ final class Kernel extends HttpKernel
     ];
 
     /**
-     * @var array<string, class-string>
+     * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
         'auth' => \App\Http\Middleware\Authenticate::class,
