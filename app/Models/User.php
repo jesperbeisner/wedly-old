@@ -26,9 +26,6 @@ class User extends Model implements Authenticatable
     use HasFactory;
 
     /** @var string */
-    protected $primaryKey = 'uuid';
-
-    /** @var string */
     protected $keyType = 'string';
 
     /** @var bool */

@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Wedly'),
 
     /*
     |--------------------------------------------------------------------------
@@ -141,7 +141,6 @@ return [
 
     'maintenance' => [
         'driver' => 'cache',
-        'store' => 'redis',
     ],
 
     /*

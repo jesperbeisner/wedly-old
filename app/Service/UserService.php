@@ -13,7 +13,7 @@ final readonly class UserService
     {
         $user = new User();
 
-        $user->uuid = Uuid::uuid7()->toString();
+        $user->id = Uuid::uuid7()->toString();
         $user->name = $name;
         $user->email = $email;
         $user->password = $password;

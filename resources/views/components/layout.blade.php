@@ -16,6 +16,10 @@
 <body class="bg-rose-50">
     <x-header/>
 
-    {{ $slot }}
+    <main class="mx-auto max-w-screen-xl">
+        {{ $slot }}
+    </main>
+
+    <x-footer/>
 </body>
 </html>

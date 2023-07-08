@@ -10,7 +10,7 @@ on:
 
 jobs:
     testing:
-        name: "Run PHP-CS-Fixer, PHPUnit and PHPStan"
+        name: "Run Pint, PHPUnit and PHPStan"
         runs-on: ubuntu-22.04
 
         steps:
