@@ -1,7 +1,7 @@
 <header>
     <nav class="bg-red-300 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="{{ route('index') }}" class="flex items-center">
+            <a href="{{ auth()->user() === null ? route('index') : route('home') }}" class="flex items-center">
                 <img src="{{ asset('img/heart.svg') }}" class="mr-3 h-6 sm:h-9" alt="Wedly.love Logo" />
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Wedly.love</span>
             </a>
