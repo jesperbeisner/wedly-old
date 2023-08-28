@@ -4,24 +4,14 @@ services:
             dockerfile: .docker/php/dev/Dockerfile
             context: .
             args:
-                USER_NAME: ${USER_NAME:-root}
-                USER_ID: ${USER_ID:-0}
+                USER_NAME: ${USER_NAME:-wedly}
+                USER_ID: ${USER_ID:-1337}
         container_name: wedly-php-dev
         depends_on:
             mysql:
                 condition: service_healthy
         extra_hosts:
             - "host.docker.internal:host-gateway"
-        volumes:
-            - .:/var/www/html
-
-    nginx:
-        build:
-            dockerfile: .docker/nginx/Dockerfile
-            context: .
-        container_name: wedly-nginx-dev
-        depends_on:
-            - php
         volumes:
             - .:/var/www/html
         ports:
@@ -49,10 +39,3 @@ services:
         ports:
             - "8025:8025"
             - "1025:1025"
-
-    redis:
-        image: redis/redis-stack:latest
-        container_name: wedly-redis-dev
-        ports:
-            - "8001:8001"
-            - "6379:6379"
