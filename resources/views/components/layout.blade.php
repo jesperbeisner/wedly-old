@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jesper Beisner">
 
-    <title>{{ isset($title) ? $title . ' - Wedly.love' : 'Wedly.love' }}️</title>
-
     <link rel="icon" type="image/vnd.microsoft.icon" href="{{ asset('favicon.ico') }}">
-    <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/main.css') }}">
+
+    <script src="{{ asset('js/htmx.js') }}"></script>
+
+    <title>{{ isset($title) ? $title . ' - Wedly.love' : 'Wedly.love' }}️</title>
 </head>
-<body class="bg-rose-50">
+<body>
     <x-header/>
 
-    <main class="mx-auto max-w-screen-xl">
+    <main>
         {{ $slot }}
     </main>
 
     <x-footer/>
+
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
