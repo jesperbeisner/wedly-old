@@ -8,11 +8,11 @@ final readonly class InputHelper
 {
     public static function border(bool $hasError, bool $hasOldValue): string
     {
-        if ($hasError === true) {
+        if (true === $hasError) {
             return 'border-red-500';
         }
 
-        if ($hasOldValue === true) {
+        if (true === $hasOldValue) {
             return 'border-green-500';
         }
 

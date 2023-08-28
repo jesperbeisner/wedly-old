@@ -1,24 +1,23 @@
-name: "CI Action"
+name: "CI"
 
 on:
     push:
         branches:
             - "master"
+            - "develop"
     pull_request:
         branches:
             - "master"
+            - "develop"
 
 jobs:
     testing:
-        name: "Run Pint, PHPUnit and PHPStan"
+        name: "Run PHP-CS-Fixer, PHPStan and PHPUnit"
         runs-on: ubuntu-22.04
 
         steps:
             -   name: "Checkout Project"
                 uses: actions/checkout@v3
-
-            -   name: "Setup node.js"
-                uses: actions/setup-node@v3
 
             -   name: "Setup PHP"
                 uses: shivammathur/setup-php@v2
@@ -35,17 +34,14 @@ jobs:
             -   name: "Install PHP dependencies"
                 run: composer install
 
-            -   name: "Install node dependencies"
-                run: npm install && npm run build
-
             -   name: "Generate key"
                 run: php artisan key:generate
 
-            -   name: "Run Pint"
-                run: vendor/bin/pint --test --verbose
-
-            -   name: "Run PHPUnit"
-                run: vendor/bin/phpunit
+            -   name: "Run PHP-CS-Fixer"
+                run: vendor/bin/php-cs-fixer fix --diff --verbose
 
             -   name: "Run PHPStan"
                 run: vendor/bin/phpstan --memory-limit=-1
+
+            -   name: "Run PHPUnit"
+                run: vendor/bin/phpunit

@@ -11,10 +11,13 @@ $finder = (new PhpCsFixer\Finder())
 ;
 
 return (new PhpCsFixer\Config())->setRules([
-    '@PER' => true,
+    '@Symfony' => true,
     'strict_param' => true,
     'declare_strict_types' => true,
     'concat_space' => ['spacing' => 'one'],
+    'phpdoc_separation' => false,
+    'phpdoc_align' => false,
+    'global_namespace_import' => false,
 ])
     ->setFinder($finder)
     ->setRiskyAllowed(true)
