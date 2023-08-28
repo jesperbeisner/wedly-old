@@ -9,9 +9,6 @@
 
     <link rel="icon" type="image/vnd.microsoft.icon" href="{{ asset('favicon.ico') }}">
     <script src="https://unpkg.com/htmx.org@1.9.2/dist/htmx.min.js"></script>
-
-    @vite('resources/css/app.css')
-    @vite('resources/js/app.js')
 </head>
 <body class="bg-rose-50">
     <x-header/>
