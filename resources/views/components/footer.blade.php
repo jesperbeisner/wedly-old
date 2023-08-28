@@ -1,3 +1,3 @@
-<footer class="text-center">
+<footer>
     Das ist ein Footer
 </footer>

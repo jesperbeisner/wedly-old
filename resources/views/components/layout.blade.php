@@ -17,7 +17,7 @@
 <body>
     <x-header/>
 
-    <main>
+    <main class="container mt-3">
         {{ $slot }}
     </main>
 

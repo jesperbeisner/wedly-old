@@ -1,5 +1,5 @@
 @props(['message'])
 
-<h1 class="text-5xl mt-8 mb-6">
+<h1>
     {{ $message }}
 </h1>
