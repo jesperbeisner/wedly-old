@@ -10,14 +10,17 @@ use DateTime;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 /**
- * @property string $id
+ * @property int $id
+ * @property string $uuid
  * @property string $name
  * @property string $email
+ * @property DateTime|null $email_verified_at
  * @property string $password
- * @property DateTime $created_at
- * @property DateTime $updated_at
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  *
  * @method static UserFactory factory($count = null, $state = [])
  */
@@ -25,11 +28,9 @@ class User extends Model implements Authenticatable
 {
     use HasFactory;
 
-    /** @var string */
-    protected $keyType = 'string';
-
-    /** @var bool */
-    public $incrementing = false;
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 
     public function getAuthIdentifierName(): string
     {
@@ -46,7 +47,7 @@ class User extends Model implements Authenticatable
         return $this->password;
     }
 
-    public function getRememberToken()
+    public function getRememberToken(): string
     {
         return '';
     }
