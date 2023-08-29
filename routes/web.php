@@ -13,8 +13,8 @@ Route::post('/login', [Controllers\Auth\LoginController::class, 'login'])->name(
 
 Route::get('/logout', [Controllers\Auth\LogoutController::class, 'logout'])->name('logout');
 
-Route::get('/register', [Controllers\Auth\RegisterController::class, 'index'])->name('register');
-Route::post('/register', [Controllers\Auth\RegisterController::class, 'register'])->name('register.execute');
+Route::get('/sign-up', [Controllers\Auth\SignUpController::class, 'index'])->name('register');
+Route::post('/sign-up', [Controllers\Auth\SignUpController::class, 'signUp'])->name('register.execute');
 
 Route::middleware([Authenticate::class])->group(function () {
     Route::get('/home', [Controllers\HomeController::class, 'home'])->name('home');

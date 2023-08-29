@@ -1,17 +1,23 @@
 :root {
     --main-text-color: #444444;
+    --main-pink-color: #febadc;
 }
 
 body {
     color: var(--main-text-color) !important;
+    background-color: #dce6f5;
 }
 
-header, nav {
-    background-color: #febadc;
+header, nav, footer {
+    background-color: var(--main-pink-color);
 }
 
-header > div {
+header > div, nav {
     border-bottom: 1px solid var(--main-text-color) !important;
+}
+
+footer {
+    border-top: 1px solid var(--main-text-color) !important;
 }
 
 header a {

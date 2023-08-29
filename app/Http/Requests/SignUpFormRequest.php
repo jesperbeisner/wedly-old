@@ -8,7 +8,7 @@ use App\Rules\RegisterEmailRule;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
-final class RegisterFormRequest extends FormRequest
+final class SignUpFormRequest extends FormRequest
 {
     protected $redirectRoute = 'register';
 
