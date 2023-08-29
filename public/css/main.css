@@ -23,10 +23,6 @@ header > div, nav {
     border-bottom: 1px solid var(--main-black) !important;
 }
 
-footer {
-    border-top: 1px solid var(--main-black) !important;
-}
-
 header a {
     color: var(--main-black) !important;
 }
@@ -37,6 +33,10 @@ nav a {
 
 nav a:hover, header a:hover {
     color: var(--main-blue) !important;
+}
+
+footer {
+    border-top: 1px solid var(--main-black) !important;
 }
 
 @font-face {
