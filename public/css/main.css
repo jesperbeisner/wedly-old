@@ -1,29 +1,30 @@
 :root {
-    --main-text-color: #444444;
-    --main-pink-color: #febadc;
+    --main-black: #444444;
+    --main-blue: #4377bb;
+    --main-pink: #febadc;
 }
 
 body {
-    color: var(--main-text-color) !important;
-    background-color: #dce6f5;
+    color: var(--main-black) !important;
+    background-color: rgba(67, 119, 187, 0.25);
 }
 
 header, nav, footer {
-    background-color: var(--main-pink-color);
+    background-color: var(--main-pink);
 }
 
 header > div, nav {
-    border-bottom: 1px solid var(--main-text-color) !important;
+    border-bottom: 1px solid var(--main-black) !important;
 }
 
 footer {
-    border-top: 1px solid var(--main-text-color) !important;
+    border-top: 1px solid var(--main-black) !important;
 }
 
 header a {
-    color: var(--main-text-color) !important;
+    color: var(--main-black) !important;
 }
 
 nav a {
-    color: var(--main-text-color) !important;
+    color: var(--main-black) !important;
 }

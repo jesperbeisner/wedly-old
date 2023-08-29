@@ -12,7 +12,7 @@
 
     <script src="{{ asset('js/htmx.js') }}"></script>
 
-    <title>{{ isset($title) ? $title . ' - Wedly.love' : 'Wedly.love' }}️</title>
+    <title>{{ isset($title) ? $title . ' - wedly.love' : 'wedly.love' }}️</title>
 </head>
 <body>
     <x-header/>

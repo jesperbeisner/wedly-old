@@ -1,8 +1,7 @@
 <header class="pt-2">
     <div class="container d-flex flex-wrap justify-content-center pb-2">
         <a href="{{ route('index') }}" class="d-flex align-items-center mb-2 mb-lg-0 me-lg-auto text-decoration-none">
-            <img width="40" height="40" src="{{ asset('img/heart.svg') }}" alt="Wedly.love icon">
-            <span class="fs-4">Wedly.love</span>
+            <img width="160" height="40" src="{{ asset('img/wedly.svg') }}" alt="wedly.love icon">
         </a>
 
         <div class="d-flex align-items-center justify-content-center col-12 col-lg-auto">
