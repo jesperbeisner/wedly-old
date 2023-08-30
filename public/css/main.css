@@ -8,7 +8,7 @@ body {
     font-family: Quicksand, sans-serif;
     font-size: 1.1em;
     color: var(--main-black) !important;
-    background-color: rgba(67, 119, 187, 0.25);
+    background-color: rgba(67, 119, 187, 0.1);
 }
 
 header, nav {
@@ -37,6 +37,10 @@ nav a:hover, header a:hover {
 
 footer {
     border-top: 1px solid var(--main-black) !important;
+}
+
+.mt-100 {
+    margin-top: 100px !important;
 }
 
 @font-face {
