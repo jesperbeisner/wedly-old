@@ -16,7 +16,7 @@
         </div>
 
         <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-            <img class="rounded-lg-3" src="{{ asset('img/bootstrap-docs.png') }}" alt="" width="720">
+            <img class="rounded-lg-3" src="{{ asset('img/wedly.love-preview.png') }}" alt="" width="720">
         </div>
     </div>
 

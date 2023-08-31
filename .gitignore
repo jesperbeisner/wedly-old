@@ -1,15 +1,3 @@
 .env
-.env.backup
-.env.production
-
 /vendor
-/node_modules
-
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-
-auth.json
-npm-debug.log
-yarn-error.log
+TODO.md
