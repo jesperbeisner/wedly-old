@@ -2,6 +2,8 @@
     --main-black: #444444;
     --main-blue: #4377bb;
     --main-pink: #febadc;
+    --main-pink-hover: #fe9ece;
+    --main-pink-hover-rgb: 254, 158, 206;
 }
 
 body {
@@ -41,6 +43,21 @@ footer {
 
 .mt-100 {
     margin-top: 100px !important;
+}
+
+.btn-wedly {
+    color: var(--main-black) !important;
+    background-color: var(--main-pink) !important;
+    border: 1px solid var(--main-pink-hover) !important;
+}
+
+.btn-wedly:hover, .btn-wedly:active {
+    background-color: var(--main-pink-hover) !important;
+}
+
+.btn-wedly:focus, .btn-wedly:focus-visible {
+    background-color: var(--main-pink-hover) !important;
+    box-shadow: 0 0 0 0.25rem rgba(var(--main-pink-hover-rgb), .5) !important;
 }
 
 @font-face {
